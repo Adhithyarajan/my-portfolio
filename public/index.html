@@ -9,16 +9,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="bg-pink-700 text-white py-4">
+    <header class="bg-pink-700 text-white py-4 relative">
         <nav class="container mx-auto flex justify-between items-center animate__animated animate__zoomIn">
-            <div class="text-2xl font-bold animate__animated animate__fadeIn">
-                <a class="hover:text-black transition-colors duration-300" href="https://docs.google.com/document/d/1DH8-hbCTK8OqZzKmxjY30_ghpfESRpVt/edit?usp=drivesdk&ouid=110576272185341512116&rtpof=true&sd=true">Blogs</a>
+            <div class="hidden md:block md:text-2xl font-bold animate__animated animate__fadeIn">
+                <a class="md:hover:text-black transition-colors duration-300" href="https://docs.google.com/document/d/1DH8-hbCTK8OqZzKmxjY30_ghpfESRpVt/edit?usp=drivesdk&ouid=110576272185341512116&rtpof=true&sd=true">Blogs</a>
             </div>
-            <ul class="flex space-x-20">
-                <li><a href="#Home" class="hover:text-black transition-colors duration-300">Home</a></li>
-                <li><a href="#About" class="hover:text-black transition-colors duration-300">About</a></li>
-                <li><a href="#Contact" class="hover:text-black transition-colors duration-300">Contact</a></li>
+            <button id="menuToggle" class="p-2 bg-transparent border border-pink-5 md:hidden focus:outline-none absolute right-1">
+                <div>
+                    <img src="images/menu-fill.svg" alt="Menu Icon" class="w-6 h-6">      
+                </div>
+            </button>
+            <div id="mobileMenu" class="bg-pink-700 w-full h-screen flex flex-col items-center justify-center md:h-auto md:bg-transparent md:w-80 hidden md:flex flex-col md:flex-row md:items-center transition duration-500 ease-in-out">
+            <ul class="flex flex-col items-center justify-center md:flex-row space-y-8 md:space-y-0 sm:space-x-4 md:space-x-20">
+                <li><a href="#Home" class="text-lg hover:text-black transition-colors duration-300">Home</a></li>
+                <li><a href="#About" class="text-lg hover:text-black transition-colors duration-300">About</a></li>
+                <li><a href="#Contact" class="text-lg hover:text-black transition-colors duration-300">Contact</a></li>
+                <li><a href="https://docs.google.com/document/d/1DH8-hbCTK8OqZzKmxjY30_ghpfESRpVt/edit?usp=drivesdk&ouid=110576272185341512116&rtpof=true&sd=true" class="text-lg hover:text-black transition-colors duration-300 md:hidden">Blogs</a></li>
             </ul>
+            <button id="closeButton" class="rounded-full p-2 bg-transparent border border-pink-50 hover:border-pink-700 md:hidden focus:outline-none absolute bottom-20">
+                <div>
+                    <img src="images/close-line.svg" alt="Close Icon" class="w-8 h-8">
+                </div>
+            </button>
+            </div>
         </nav>
     </header>
     <main id="Home" class="bg-zinc-900 text-pink-700 flex flex-col md:flex-row h-screen">

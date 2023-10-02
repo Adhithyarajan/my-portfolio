@@ -1,19 +1,33 @@
-const sections = document.querySelectorAll('main');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const closeButton = document.getElementById("closeButton");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-const options = {
-  root: null,
-  threshold: 0.2,
-  rootMargin: '0px'
-};
+  function toggleMenu() {
+    mobileMenu.classList.toggle("hidden");
+    menuToggle.classList.toggle("hidden");
+  }
 
-const observer = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate__animated', 'animate__zoomIn');
-    }
+  menuToggle.addEventListener("click", toggleMenu);
+  closeButton.addEventListener("click", toggleMenu);
+
+  const sections = document.querySelectorAll("main");
+
+  const options = {
+    root: null,
+    threshold: 0.2,
+    rootMargin: "0px",
+  };
+
+  const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate__animated", "animate__zoomIn");
+      }
+    });
+  }, options);
+
+  sections.forEach((section) => {
+    observer.observe(section);
   });
-}, options);
-
-sections.forEach(section => {
-  observer.observe(section);
 });

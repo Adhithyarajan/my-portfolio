@@ -8,15 +8,15 @@
     <title>Adhithya Rajan</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-zinc-900">
     <header class="bg-pink-700 text-white py-4 relative">
         <nav class="container mx-auto flex justify-between items-center animate__animated animate__zoomIn">
             <div class="hidden md:block md:text-2xl font-bold animate__animated animate__fadeIn">
                 <a class="md:hover:text-black transition-colors duration-300" href="https://docs.google.com/document/d/1DH8-hbCTK8OqZzKmxjY30_ghpfESRpVt/edit?usp=drivesdk&ouid=110576272185341512116&rtpof=true&sd=true">Blogs</a>
             </div>
-            <button id="menuToggle" class="p-2 bg-transparent border border-pink-5 md:hidden focus:outline-none absolute right-1">
+            <button onclick="toggleMenu()" class="p-2 bg-transparent md:hidden focus:outline-none absolute right-1">
                 <div>
-                    <img src="images/menu-fill.svg" alt="Menu Icon" class="w-6 h-6">      
+                    <img src="images/menu-fill.svg" alt="Menu Icon" class="w-7 h-7">      
                 </div>
             </button>
             <div id="mobileMenu" class="bg-pink-700 w-full h-screen flex flex-col items-center justify-center md:h-auto md:bg-transparent md:w-80 hidden md:flex flex-col md:flex-row md:items-center transition duration-500 ease-in-out">
@@ -26,15 +26,14 @@
                 <li><a href="#Contact" class="text-lg hover:text-black transition-colors duration-300">Contact</a></li>
                 <li><a href="https://docs.google.com/document/d/1DH8-hbCTK8OqZzKmxjY30_ghpfESRpVt/edit?usp=drivesdk&ouid=110576272185341512116&rtpof=true&sd=true" class="text-lg hover:text-black transition-colors duration-300 md:hidden">Blogs</a></li>
             </ul>
-            <button id="closeButton" class="rounded-full p-2 bg-transparent border border-pink-50 hover:border-pink-700 md:hidden focus:outline-none absolute bottom-20">
+            <button onclick="toggleMenu()" class="rounded-full p-2 bg-transparent border border-pink-50 hover:border-pink-700 md:hidden focus:outline-none absolute bottom-20">
                 <div>
                     <img src="images/close-line.svg" alt="Close Icon" class="w-8 h-8">
                 </div>
             </button>
-            </div>
         </nav>
     </header>
-    <main id="Home" class="bg-zinc-900 text-pink-700 flex flex-col md:flex-row h-screen">
+    <main id="Home" class="text-pink-700 flex flex-col md:flex-row h-screen">
         <div class="flex my-12 md:my-0 flex-col md:flex-1 items-center justify-center animate__animated animate__zoomIn">
             <h1 class="text-2xl md:text-4xl font-bold animate__animated animate__zoomIn">Hey, Iam Adhithya Rajan</h1>
             <h2 class="text-lg md:text-2xl text-green-50 italic animate__animated animate__zoomIn">Frontend Developer-Writer</h2>
@@ -43,13 +42,12 @@
             <img src="images/2202-2020-101115569136863779874-01 (1)-01-01.jpeg.jpg" alt="Adhithya Rajan's Photo" class="w-[250px] md:w-[500px] rounded-full shadow-lg">
         </div>
     </main>       
-        <main id="About" class="bg-zinc-900 text-pink-700 flex flex-col md:flex-row">
+        <main id="About" class="text-pink-700 flex flex-col md:flex-row">
                 <div class="flex my-12 md:flex-1 justify-center items-center transition-transform duration-300 transform hover:scale-110">
                     <a href="docs/adhithya-resume.pdf" target="_blank">
                         <img src="images/cv-file-interface-symbol.svg" alt="Adhithya Rajan's Resume" class="w-[300px] md:w-[400px] shadow-lg border-4 border-pink-700 hover:bg-white duration-300">
                     </a>
                 </div>
-            </div>
             <div class="flex flex-col md:flex-1 items-center justify-center h-screen">
                 <div class="w-[300px] md:w-[400px] p-15">
                 <h1 class="text-2xl md:text-4xl font-bold my-5 animate__animated animate__zoomIn">About Me</h1>
@@ -60,7 +58,7 @@
                     making the web a more engaging place for all. Let's shape the web's future together.</p>
             </div>
         </main>
-        <main id="Contact" class="h-screen bg-zinc-900 text-pink-700">
+        <main id="Contact" class="h-screen text-pink-700">
             <div class="flex flex-col items-center p-20 md:p-40 animate__animated animate__zoomIn">
                 <h1 class="text-4xl font-bold">Get in Touch with Me On...</h1>
             </div>
